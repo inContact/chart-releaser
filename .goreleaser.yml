@@ -139,10 +139,10 @@ dockers:
     dockerfile: Dockerfile
     use: buildx
     image_templates:
-      - quay.io/helmpack/chart-releaser:{{ .Tag }}-ppc64le
-      - quay.io/helmpack/chart-releaser:latest-ppc64le
-      # - ghcr.io/incontact/chart-releaser:{{ .Tag }}-ppc64le
-      # - ghcr.io/incontact/chart-releaser:latest-ppc64le
+      # - quay.io/helmpack/chart-releaser:{{ .Tag }}-ppc64le
+      # - quay.io/helmpack/chart-releaser:latest-ppc64le
+      - ghcr.io/incontact/chart-releaser:{{ .Tag }}-ppc64le
+      - ghcr.io/incontact/chart-releaser:latest-ppc64le
     build_flag_templates:
       - "--platform=linux/ppc64le"
       - --label=org.label-schema.schema-version=1.0
